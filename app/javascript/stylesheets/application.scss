@@ -1,0 +1,12 @@
+@import './bootstrap_custom.scss';
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700');
+
+.navbar {
+        margin-bottom: 0;
+        background: $black;
+}
+
+a:visited {
+        color: $black;
+}
+

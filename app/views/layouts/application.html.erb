@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MarketHunter</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  </head>
+
+  <body>
+    <nav class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand">
+        <%= link_to  "Inicio", root_path %>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <%= link_to  "Inicio", root_path %>
+          </li>
+          <li class="nav-item">
+            <%= link_to  "Lista de Product", Product %>
+          </li>
+          <li class="nav-item">
+            <%= link_to  "Lista unidades", UnitMeasurement %>
+          </li>
+          <li class="nav-item">
+            <%= link_to  "Lista Tipo de Producto", ProductKind %>
+          </li>
+        </ul>
+        <span class="navbar-text">
+          Navbar text with an inline element
+        </span>
+      </div>
+    </nav>
+
+    <main class='container'>
+      <div class="row">
+        <div class="col-12 overflow-auto">
+          <%= yield %>
+        </div>
+      </div>
+    </main>
+
+  </body>
+</html>

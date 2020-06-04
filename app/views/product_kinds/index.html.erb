@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Product Kinds</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @product_kinds.each do |product_kind| %>
+      <tr>
+        <th scope="row"><%= product_kind.id %></th>
+        <td><%= product_kind.name %></td>
+        <td>
+          <%= link_to 'Show', product_kind, class: "btn btn-info"%>
+        </td>
+        <td>
+          <%= link_to 'Edit', edit_product_kind_path(product_kind), class: "btn btn-success" %>
+        </td>
+        <td>
+          <%= link_to 'Destroy', product_kind, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Product Kind', new_product_kind_path, class: 'btn btn-primary' %>

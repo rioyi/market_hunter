@@ -1,0 +1,43 @@
+<h1 class="d-flex justify-content-center">Panel Inicial</h1>
+
+<div class="card-columns">
+  <div class="col mb-4">
+    <div class="card text-center">
+      <div class="card-body">
+        <h5 class="card-title">PRODUCTOS</h5>
+        <h1>
+          <%= Product.all.count %>
+        </h1>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <%= link_to  "Lista de Product", Product, class: 'btn btn-primary' %>
+      </div>
+    </div>
+  </div>
+
+    <div class="col mb-4">
+      <div class="card text-center">
+        <div class="card-body">
+          <h5 class="card-title">TIPO PRODUCTOS</h5>
+          <h1>
+            <%= ProductKind.all.count %>
+          </h1>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <%= link_to  "Lista Tipo de Producto", ProductKind, class: 'btn btn-primary' %>
+        </div>
+      </div>
+    </div>
+
+  <div class="col mb-4">
+    <div class="card text-center">
+      <div class="card-body">
+        <h5 class="card-title">UNIDAD DE MEDICIÓN</h5>
+        <h1>
+          <%= UnitMeasurement.all.count %>
+        </h1>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <%= link_to  "Lista unidades", UnitMeasurement, class: 'btn btn-primary' %>
+      </div>
+    </div>
+  </div>
+
+</div>
